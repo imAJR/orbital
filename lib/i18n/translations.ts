@@ -1,0 +1,378 @@
+export const translations = {
+  ar: {
+    // ── NAVIGATION ──
+    nav: {
+      home: "الرئيسية",
+      explore: "الاستكشاف",
+      notifications: "التنبيهات",
+      messages: "الرسائل",
+      bookmarks: "الحفوظات",
+      profile: "الملف الشخصي",
+      settings: "الإعدادات",
+      ranks: "الرتب",
+      store: "المتجر",
+      channels: "القنوات",
+      gallery: "المعرض",
+      sparks: "الشرارات",
+      flickers: "الومضات",
+      stations: "المحطات",
+    },
+
+    // ── BUTTONS & ACTIONS ──
+    actions: {
+      post: "نشر",
+      reply: "رد",
+      like: "إعجاب",
+      comment: "تعليق",
+      repost: "إعادة نشر",
+      share: "مشاركة",
+      follow: "متابعة",
+      unfollow: "إلغاء المتابعة",
+      message: "رسالة",
+      edit: "تحرير",
+      delete: "حذف",
+      save: "حفظ",
+      cancel: "إلغاء",
+      confirm: "تأكيد",
+      block: "حظر",
+      report: "إبلاغ",
+      search: "بحث",
+      clear: "مسح",
+      more: "المزيد",
+      close: "إغلاق",
+      upload: "رفع",
+      download: "تحميل",
+      copy: "نسخ",
+      send: "إرسال",
+      next: "التالي",
+      previous: "السابق",
+      done: "تم",
+      loading: "جاري التحميل...",
+      error: "حدث خطأ",
+      retry: "إعادة محاولة",
+    },
+
+    // ── PLACEHOLDERS ──
+    placeholder: {
+      whatNew: "بماذا تفكر الآن؟",
+      search: "ابحث عن أشخاص أو علامات...",
+      writeComment: "اكتب تعليقاً...",
+      writeMessage: "اكتب رسالة...",
+      enterEmail: "أدخل بريدك الإلكتروني",
+      enterPassword: "أدخل كلمة المرور",
+      enterUsername: "أدخل اسم المستخدم",
+      enterBio: "أكتب نبذة عن نفسك",
+    },
+
+    // ── FEED & POSTS ──
+    feed: {
+      trending: "الترندات",
+      recent: "الأحدث",
+      popular: "الأكثر شهرة",
+      following: "متابعيك",
+      likes: "إعجابات",
+      comments: "تعليقات",
+      shares: "مشاركات",
+      views: "مشاهدات",
+      noContent: "لا توجد منشورات بعد",
+      loadMore: "حمل المزيد",
+      posts: "منشور", // تمت الإضافة
+    },
+
+    // ── PROFILE ──
+    profile: {
+      followers: "المتابعون",
+      following: "يتابع",
+      posts: "المنشورات",
+      media: "الوسائط",
+      about: "حول",
+      joined: "انضم في",
+      website: "الموقع",
+      location: "الموقع الجغرافي",
+      editProfile: "تحرير الملف الشخصي",
+      changeAvatar: "تغيير الصورة",
+      changeCover: "تغيير الغلاف",
+      verifyAccount: "التحقق من الحساب",
+      viewProfile: "عرض الملف الشخصي",
+    },
+
+    // ── MESSAGES ──
+    messages: {
+      newMessage: "رسالة جديدة",
+      conversations: "المحادثات",
+      noMessages: "لا توجد رسائل",
+      startConversation: "ابدأ محادثة",
+      typing: "يكتب...",
+      online: "متصل",
+      offline: "غير متصل",
+      lastSeen: "آخر ظهور",
+      unsendMessage: "إلغاء إرسال",
+      deleteConversation: "حذف المحادثة",
+      muteNotifications: "كتم التنبيهات",
+      clearHistory: "مسح السجل",
+    },
+
+    // ── NOTIFICATIONS ──
+    notifications: {
+      liked: "أعجب بمنشورك",
+      commented: "علق على منشورك",
+      followed: "بدأ متابعتك",
+      replied: "رد على تعليقك",
+      reposted: "أعاد نشر منشورك",
+      mentioned: "ذكرك",
+      newFollower: "متابع جديد",
+      milestone: "تهانينا بـ",
+      markAsRead: "تحديد كمقروء",
+      clearAll: "مسح الكل",
+    },
+
+    // ── SETTINGS ──
+    settings: {
+      account: "الحساب",
+      privacy: "الخصوصية",
+      security: "الأمان",
+      notifications: "التنبيهات",
+      appearance: "المظهر",
+      language: "اللغة",
+      darkMode: "الوضع الليلي",
+      lightMode: "الوضع النهاري",
+      autoMode: "الوضع التلقائي",
+      changePassword: "تغيير كلمة المرور",
+      twoFactor: "المصادقة الثنائية",
+      logout: "تسجيل الخروج",
+      deleteAccount: "حذف الحساب",
+      blockList: "قائمة الحظر",
+      blockedUsers: "المستخدمون المحظورون",
+      privacySettings: "إعدادات الخصوصية",
+      publicProfile: "ملف شخصي عام",
+      privateProfile: "ملف شخصي خاص",
+    },
+
+    // ── TIME ──
+    time: {
+      now: "الآن",
+      minute: "دقيقة",
+      hour: "ساعة",
+      day: "يوم",
+      week: "أسبوع",
+      month: "شهر",
+      year: "سنة",
+      ago: "منذ",
+      justnow: "للتو",
+    },
+
+    // ── ERRORS ──
+    errors: {
+      required: "هذا الحقل مطلوب",
+      invalidEmail: "بريد إلكتروني غير صحيح",
+      invalidPassword: "كلمة مرور غير صحيحة",
+      networkError: "خطأ في الاتصال",
+      notFound: "لم يتم العثور على",
+      unauthorized: "غير مصرح",
+      forbidden: "منع",
+      serverError: "خطأ في الخادم",
+      tryAgain: "حاول مرة أخرى",
+    },
+
+    // ── COMMON ──
+    common: {
+      orbital: "أوربيتال",
+      welcome: "مرحباً بك في أوربيتال",
+      tagline: "كل ما تشاركه. مدار واحد.",
+      description: "منصة التواصل الاجتماعي الحديثة",
+      loading: "جاري التحميل...",
+      empty: "فارغ",
+      noData: "لا توجد بيانات",
+    },
+  },
+
+  en: {
+    // ── NAVIGATION ──
+    nav: {
+      home: "Home",
+      explore: "Explore",
+      notifications: "Notifications",
+      messages: "Messages",
+      bookmarks: "Bookmarks",
+      profile: "Profile",
+      settings: "Settings",
+      ranks: "Ranks",
+      store: "Store",
+      channels: "Channels",
+      gallery: "Gallery",
+      sparks: "Sparks",
+      flickers: "Flickers",
+      stations: "Stations",
+    },
+
+    // ── BUTTONS & ACTIONS ──
+    actions: {
+      post: "Post",
+      reply: "Reply",
+      like: "Like",
+      comment: "Comment",
+      repost: "Repost",
+      share: "Share",
+      follow: "Follow",
+      unfollow: "Unfollow",
+      message: "Message",
+      edit: "Edit",
+      delete: "Delete",
+      save: "Save",
+      cancel: "Cancel",
+      confirm: "Confirm",
+      block: "Block",
+      report: "Report",
+      search: "Search",
+      clear: "Clear",
+      more: "More",
+      close: "Close",
+      upload: "Upload",
+      download: "Download",
+      copy: "Copy",
+      send: "Send",
+      next: "Next",
+      previous: "Previous",
+      done: "Done",
+      loading: "Loading...",
+      error: "Error",
+      retry: "Retry",
+    },
+
+    // ── PLACEHOLDERS ──
+    placeholder: {
+      whatNew: "What's on your mind?",
+      search: "Search people or tags...",
+      writeComment: "Write a comment...",
+      writeMessage: "Write a message...",
+      enterEmail: "Enter your email",
+      enterPassword: "Enter your password",
+      enterUsername: "Enter your username",
+      enterBio: "Write a bio",
+    },
+
+    // ── FEED & POSTS ──
+    feed: {
+      trending: "Trending",
+      recent: "Recent",
+      popular: "Popular",
+      following: "Following",
+      likes: "Likes",
+      comments: "Comments",
+      shares: "Shares",
+      views: "Views",
+      noContent: "No posts yet",
+      loadMore: "Load more",
+      posts: "Posts", // Added
+    },
+
+    // ── PROFILE ──
+    profile: {
+      followers: "Followers",
+      following: "Following",
+      posts: "Posts",
+      media: "Media",
+      about: "About",
+      joined: "Joined",
+      website: "Website",
+      location: "Location",
+      editProfile: "Edit Profile",
+      changeAvatar: "Change Avatar",
+      changeCover: "Change Cover",
+      verifyAccount: "Verify Account",
+      viewProfile: "View Profile",
+    },
+
+    // ── MESSAGES ──
+    messages: {
+      newMessage: "New Message",
+      conversations: "Conversations",
+      noMessages: "No messages",
+      startConversation: "Start a conversation",
+      typing: "typing...",
+      online: "Online",
+      offline: "Offline",
+      lastSeen: "Last seen",
+      unsendMessage: "Unsend",
+      deleteConversation: "Delete Conversation",
+      muteNotifications: "Mute Notifications",
+      clearHistory: "Clear History",
+    },
+
+    // ── NOTIFICATIONS ──
+    notifications: {
+      liked: "liked your post",
+      commented: "commented on your post",
+      followed: "started following you",
+      replied: "replied to your comment",
+      reposted: "reposted your post",
+      mentioned: "mentioned you",
+      newFollower: "New Follower",
+      milestone: "Congratulations on reaching",
+      markAsRead: "Mark as read",
+      clearAll: "Clear all",
+    },
+
+    // ── SETTINGS ──
+    settings: {
+      account: "Account",
+      privacy: "Privacy",
+      security: "Security",
+      notifications: "Notifications",
+      appearance: "Appearance",
+      language: "Language",
+      darkMode: "Dark Mode",
+      lightMode: "Light Mode",
+      autoMode: "Auto Mode",
+      changePassword: "Change Password",
+      twoFactor: "Two-Factor Auth",
+      logout: "Logout",
+      deleteAccount: "Delete Account",
+      blockList: "Block List",
+      blockedUsers: "Blocked Users",
+      privacySettings: "Privacy Settings",
+      publicProfile: "Public Profile",
+      privateProfile: "Private Profile",
+    },
+
+    // ── TIME ──
+    time: {
+      now: "now",
+      minute: "minute",
+      hour: "hour",
+      day: "day",
+      week: "week",
+      month: "month",
+      year: "year",
+      ago: "ago",
+      justnow: "just now",
+    },
+
+    // ── ERRORS ──
+    errors: {
+      required: "This field is required",
+      invalidEmail: "Invalid email address",
+      invalidPassword: "Invalid password",
+      networkError: "Network error",
+      notFound: "Not found",
+      unauthorized: "Unauthorized",
+      forbidden: "Forbidden",
+      serverError: "Server error",
+      tryAgain: "Try again",
+    },
+
+    // ── COMMON ──
+    common: {
+      orbital: "Orbital",
+      welcome: "Welcome to Orbital",
+      tagline: "Everything you share. One orbit.",
+      description: "The Modern Social Platform",
+      loading: "Loading...",
+      empty: "Empty",
+      noData: "No data available",
+    },
+  },
+};
+
+export type LanguageCode = "ar" | "en";
+export type TranslationKey = typeof translations.en;

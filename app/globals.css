@@ -1,0 +1,546 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Cairo:wght@300;400;600;700;800&display=swap");
+
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+/* ── CSS VARIABLES ── */
+:root {
+  --font-syne: "Syne", system-ui, sans-serif;
+  --font-dm-sans: "DM Sans", system-ui, sans-serif;
+  --font-cairo: "Cairo", system-ui, sans-serif;
+
+  /* ── BRAND COLORS ── */
+  --void: #050508;
+  --deep: #0d0d18;
+  --surface: #13131f;
+  --rim: #1e1e30;
+  --muted: #3a3a55;
+  --subtle: #6b6b90;
+  --text: #e8e8f5;
+  --text-dim: #9898b8;
+
+  --orbital-blue: #4a6cf7;
+  --orbital-violet: #9b5cf6;
+  --orbital-teal: #22d4bf;
+  --orbital-pink: #f75a9a;
+  --orbital-gold: #f7b04a;
+
+  /* ── LIGHT MODE (fallback if toggled) ── */
+  --bg-light: #ffffff;
+  --surface-light: #f5f5f7;
+  --border-light: #e5e5ea;
+  --text-light: #0d0d18;
+  --text-secondary-light: #6b6b90;
+
+  /* ── DARK MODE (default) ── */
+  --bg-dark: var(--void);
+  --surface-dark: var(--surface);
+  --border-dark: var(--rim);
+  --text-dark: var(--text);
+  --text-secondary-dark: var(--text-dim);
+}
+
+/* ── GLOBAL STYLES ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: transparent;
+  color: var(--text-dark);
+  font-family: var(--font-dm-sans);
+  line-height: 1.6;
+  transition: color 0.3s ease;
+  overflow-x: hidden;
+}
+
+[dir="rtl"] body, [dir="rtl"], [dir="rtl"] button {
+  font-family: var(--font-cairo), sans-serif !important;
+}
+
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4, [dir="rtl"] h5, [dir="rtl"] h6 {
+  font-family: var(--font-cairo), sans-serif !important;
+}
+
+body.light {
+  background-color: transparent;
+  color: var(--text-light);
+}
+
+/* ── HEADINGS ── */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-syne);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.25rem;
+}
+h5 {
+  font-size: 1.1rem;
+}
+h6 {
+  font-size: 1rem;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--orbital-blue);
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--orbital-violet);
+}
+
+/* ── DARK & LIGHT MODES ── */
+.dark {
+  color-scheme: dark;
+}
+
+.dark body {
+  background-color: transparent;
+  color: var(--text-dark);
+}
+
+.light {
+  color-scheme: light;
+}
+
+.light body {
+  background-color: transparent;
+  color: var(--text-light);
+}
+
+/* ── LINKS ── */
+a {
+  color: var(--orbital-blue);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--orbital-violet);
+}
+
+/* ── BUTTONS ── */
+button {
+  font-family: var(--font-dm-sans);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  outline: none;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── INPUT FIELDS ── */
+input,
+textarea,
+select {
+  font-family: var(--font-dm-sans);
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-dark);
+  border-radius: 8px;
+  padding: 8px 12px;
+  background-color: var(--surface-dark);
+  color: var(--text-dark);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--orbital-blue);
+  box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.1);
+}
+
+.light input,
+.light textarea,
+.light select {
+  background-color: var(--surface-light);
+  color: var(--text-light);
+  border-color: var(--border-light);
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ── UTILITY ANIMATIONS ── */
+.animate-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.3s ease-in-out;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.3s ease-in-out;
+}
+
+.slide-in-up {
+  animation: slideInUp 0.3s ease-in-out;
+}
+
+/* ── SCROLLBAR DARK ── */
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--orbital-blue);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: var(--orbital-violet);
+}
+
+/* ── SCROLLBAR LIGHT ── */
+.light ::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+}
+
+.light ::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* ── PLACEHOLDER STYLES ── */
+::placeholder {
+  color: var(--text-secondary-dark);
+  opacity: 0.7;
+}
+
+.light ::placeholder {
+  color: var(--text-secondary-light);
+}
+
+/* ── SELECTION ── */
+::selection {
+  background-color: var(--orbital-blue);
+  color: white;
+}
+
+.light ::selection {
+  background-color: var(--orbital-blue);
+  color: white;
+}
+
+/* ── GLASS MORPHISM ── */
+.glass {
+  background: rgba(13, 13, 24, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.light .glass {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* ── UNIVERSAL GLASS ── */
+[class*="bg-surface"], [class*="bg-background"] {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* ── GRADIENT TEXT ── */
+.gradient-text {
+  background: linear-gradient(
+    135deg,
+    var(--orbital-blue) 0%,
+    var(--orbital-violet) 50%,
+    var(--orbital-teal) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── GLOW EFFECTS ── */
+.glow-blue {
+  text-shadow: 0 0 10px rgba(74, 108, 247, 0.5);
+}
+
+.glow-violet {
+  text-shadow: 0 0 10px rgba(155, 92, 246, 0.5);
+}
+
+.glow-teal {
+  text-shadow: 0 0 10px rgba(34, 212, 191, 0.5);
+}
+
+/* ── TRANSITIONS ── */
+.transition-all {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.transition-smooth {
+  transition: all 0.4s ease-in-out;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+  h4 {
+    font-size: 1.1rem;
+  }
+
+  body {
+    font-size: 14px;
+  }
+}
+
+/* ── RTL SUPPORT ── */
+[dir="rtl"] {
+  direction: rtl;
+}
+
+[dir="ltr"] {
+  direction: ltr;
+}
+
+/* ── CUSTOM SCROLLBAR FOR RTL ── */
+[dir="rtl"] ::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* ── SMOOTH TRANSITIONS ── */
+* {
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease;
+}
+
+/* ── FOCUS VISIBLE ── */
+:focus-visible {
+  outline: 2px solid var(--orbital-blue);
+  outline-offset: 2px;
+}
+
+/* ── TABLE STYLES ── */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid var(--border-dark);
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--surface-dark);
+  font-weight: 600;
+}
+
+/* ── CODE BLOCK ── */
+code {
+  background-color: var(--surface-dark);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: "Courier New", monospace;
+  font-size: 0.9em;
+}
+
+pre {
+  background-color: var(--surface-dark);
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* ── BLOCKQUOTE ── */
+/* تم تعديل الخصائص هنا لتصبح منطقية (Logical) وتدعم الاتجاهين تلقائياً */
+blockquote {
+  border-inline-start: 4px solid var(--orbital-blue);
+  padding-inline-start: 16px;
+  margin-inline-start: 0;
+  color: var(--text-secondary-dark);
+  font-style: italic;
+}
+
+/* ── HORIZONTAL RULE ── */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--border-dark),
+    transparent
+  );
+  margin: 24px 0;
+}
+
+/* ── UTILITY CLASSES ── */
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── ASPECT RATIOS ── */
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+/* ── FLEXBOX UTILITIES ── */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── SAFE AREA FOR IPHONE ── */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: max(12px, env(safe-area-inset-left));
+    padding-right: max(12px, env(safe-area-inset-right));
+  }
+}

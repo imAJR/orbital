@@ -1,0 +1,6 @@
+{
+  "name": "أوربيتال | Orbital",
+  "description": "شبكة تواصل اجتماعية كونية مبنية على ثيم الزجاج المصقول (Frosted Glass) والجماليات النجمية المذهلة.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
